@@ -1,0 +1,65 @@
+/* frontend/src/components/QuickEventForm/QuickEventForm.module.css */
+.form {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.form h3 {
+  color: #0077b6;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup input {
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0f7fa;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #0077b6;
+}
+
+.submitBtn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #005a8c;
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .inputGroup {
+    grid-template-columns: 1fr;
+  }
+}

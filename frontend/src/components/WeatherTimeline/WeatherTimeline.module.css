@@ -1,0 +1,95 @@
+/* frontend/src/components/WeatherTimeline/WeatherTimeline.module.css */
+.timeline {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: rgb(34, 34, 255);
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.weatherForecast {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(123, 152, 234, 0.15);
+  margin: 20px 0;
+}
+
+.tableHeader {
+  background-color: #7884d0;
+  color: white;
+}
+
+.tableHeader th {
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9em;
+  border-right: 1px solid #5b60a2;
+}
+
+.tableHeader th:last-child {
+  border-right: none;
+}
+
+.weatherForecast td {
+  padding: 20px 12px;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.weatherForecast td:last-child {
+  border-right: none;
+}
+
+.weatherForecast td:hover {
+  background-color: #f8f9ff;
+  transform: translateY(-2px);
+}
+
+.weatherForecast tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.metricCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.metricIcon {
+  font-size: 20px;
+}
+
+.metricLabel {
+  font-weight: 500;
+  color: #5b60a2;
+}
+
+.metricValue {
+  margin: 0;
+  font-size: 0.9em;
+  color: #5b60a2;
+  font-weight: 600;
+}
+
+/* Remove the old styles we're replacing */
+.weatherCards,
+.weatherCard,
+.weatherIcon,
+.weatherDetails {
+  /* These will no longer be used */
+}

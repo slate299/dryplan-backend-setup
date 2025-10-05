@@ -1,0 +1,56 @@
+/* frontend/src/components/EventHeader/EventHeader.module.css */
+.header {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3b82f6;
+}
+
+.eventName {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.date,
+.location {
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.riskBadge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  color: white;
+}
+
+.riskHigh {
+  background-color: #dc2626;
+}
+
+.riskMedium {
+  background-color: #ea580c;
+}
+
+.riskLow {
+  background-color: #16a34a;
+}

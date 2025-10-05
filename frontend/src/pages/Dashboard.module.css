@@ -1,0 +1,288 @@
+/* Dashboard.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5fbff 0%, #f0e6ff 100%);
+  animation: fadeIn 0.8s ease;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #6b5b95 0%, #b7aad6 100%);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(71, 58, 107, 0.3);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form */
+.form {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(71, 58, 107, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #e8e2f5;
+}
+
+.form h3 {
+  color: #6b5b95;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup input,
+.inputGroup select {
+  padding: 0.8rem 1rem;
+  border: 2px solid #e8e2f5;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #faf9ff;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: #b7aad6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(183, 170, 214, 0.2);
+}
+
+/* Ensure date input shows calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5); /* adjust for visibility on light background */
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+/* Buttons */
+.submitBtn {
+  background: linear-gradient(135deg, #6b5b95 0%, #8c7ac3 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #8c7ac3 0%, #6b5b95 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(71, 58, 107, 0.3);
+}
+
+.submitBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.locationSelect {
+  color: #333;
+  cursor: pointer;
+}
+
+.locationSelect option {
+  padding: 0.5rem;
+  background: white;
+  color: #333;
+}
+
+/* Events */
+.eventsSection h2 {
+  color: #6b5b95;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #e8e2f5;
+  padding-bottom: 0.5rem;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(71, 58, 107, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  animation: fadeIn 0.5s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(71, 58, 107, 0.15);
+}
+
+/* Card color by risk */
+.cardHigh {
+  background: linear-gradient(135deg, #f3e5ff 0%, #e0c3fc 100%);
+  border-left: 4px solid #8c7ac3;
+}
+.cardMedium {
+  background: linear-gradient(135deg, #e0f0ff 0%, #c3ddfc 100%);
+  border-left: 4px solid #5a9bd4;
+}
+.cardLow {
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6f0ff 100%);
+  border-left: 4px solid #b0c4de;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.eventName {
+  color: #473a6b;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.riskBadge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+}
+
+.riskBadgeHigh {
+  background: #dc3545;
+}
+.riskBadgeMedium {
+  background: #ff8c00;
+}
+.riskBadgeLow {
+  background: #28a745;
+}
+
+.cardBody p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.cardFooter {
+  margin-top: 1rem;
+}
+
+.viewDetailsBtn {
+  background: transparent;
+  border: 2px solid #b7aad6;
+  color: #473a6b;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.viewDetailsBtn:hover {
+  background: #b7aad6;
+  color: white;
+}
+
+.emptyState,
+.loading {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(71, 58, 107, 0.1);
+  color: #666;
+  border: 1px solid #f0ebfa;
+}
+
+.errorMessage {
+  background: #ffe6e6;
+  color: #dc3545;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #dc3545;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inputGroup {
+    grid-template-columns: 1fr;
+  }
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .cardHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .riskBadge {
+    align-self: flex-start;
+  }
+}

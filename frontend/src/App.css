@@ -1,0 +1,65 @@
+/* frontend/src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5fbff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* Main app layout */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content area should take remaining space */
+.App > :not(nav) {
+  flex: 1;
+}
+
+/* Global utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+
+/* Global animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global responsive breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}

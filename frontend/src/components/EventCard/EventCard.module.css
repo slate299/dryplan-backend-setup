@@ -1,0 +1,108 @@
+/* frontend/src/components/EventCard/EventCard.module.css */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  animation: fadeIn 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.eventName {
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.riskBadge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+.badgeHigh {
+  background: #dc3545;
+}
+
+.badgeMedium {
+  background: #ff8c00;
+}
+
+.badgeLow {
+  background: #28a745;
+}
+
+.riskHigh {
+  border-left-color: #dc3545;
+  background: linear-gradient(135deg, #fff 0%, #ffe6e6 100%);
+}
+
+.riskMedium {
+  border-left-color: #ff8c00;
+  background: linear-gradient(135deg, #fff 0%, #fff4e6 100%);
+}
+
+.riskLow {
+  border-left-color: #28a745;
+  background: linear-gradient(135deg, #fff 0%, #e8f5e8 100%);
+}
+
+.cardBody {
+  margin-bottom: 1rem;
+}
+
+.date,
+.location {
+  margin: 0.5rem 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.viewDetailsBtn {
+  background: transparent;
+  border: 2px solid #0077b6;
+  color: #0077b6;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.viewDetailsBtn:hover {
+  background: #0077b6;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,32 @@
+/* components/Navbar.module.css */
+.navbar {
+  background: linear-gradient(to right, #473a6b, #b7aad6);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10.5rem;
+  font-size: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
