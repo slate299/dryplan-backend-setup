@@ -12,6 +12,55 @@
 - Node.js installed
 - Git installed
 - VS Code (or any code editor)
+- MongoDB running locally
+
+---
+
+## 📁 Project Structure
+```
+dryplan-backend-dashboard/
+├── README.md
+├── backend/
+│   ├── .env                    ← CREATE THIS FILE
+│   ├── server.js
+│   ├── package.json
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   └── routes/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   └── package.json
+└── .gitignore
+```
+
+---
+
+## 🔐 Environment Setup
+
+### Step 1: Create .env File
+Navigate to `backend/` folder and create a file named `.env`
+
+### Step 2: Add Configuration
+Add these lines to your `.env` file:
+```env
+MONGO_URI=mongodb://localhost:27017/dryplan
+PORT=5000
+OPENWEATHER_API_KEY=321428953e553724280a6a3952309ce4
+```
+
+### Step 3: Verify Location
+Ensure your file structure looks like:
+```
+backend/
+├── .env          ← THIS FILE SHOULD BE HERE
+├── server.js
+├── package.json
+└── ...other folders
+```
 
 ---
 
@@ -19,8 +68,8 @@
 
 ### 1. GET THE LATEST CODE
 ```bash
-# Open terminal in VS Code
-git pull origin main
+git clone [your-repo-url]
+cd dryplan-backend-dashboard
 ```
 
 ### 2. OPEN TWO TERMINAL WINDOWS
@@ -39,14 +88,6 @@ cd backend
 ### Install dependencies:
 ```bash
 npm install
-```
-
-### Set up environment:
-Make sure `.env` file exists in backend folder with:
-```env
-MONGO_URI=mongodb://localhost:27017/dryplan
-PORT=5000
-OPENWEATHER_API_KEY=321428953e553724280a6a3952309ce4
 ```
 
 ### Start backend server:
@@ -102,11 +143,21 @@ http://localhost:5173
 
 ---
 
+## 📱 Test the Application
+
+### Quick Demo Flow:
+1. **Add an Event** using the quick form
+2. **See Event Card** appear with risk assessment
+3. **View Real-time Updates** as events are created
+4. **Check Responsive Design** on different screen sizes
+
+---
+
 ## 🛠️ Troubleshooting
 
 ### If Backend Fails:
 - Check if MongoDB is running
-- Verify `.env` file exists with correct API key
+- Verify `.env` file exists in correct location
 - Ensure port 5000 is available
 
 ### If Frontend Fails:
@@ -118,16 +169,6 @@ http://localhost:5173
 - Both servers MUST run simultaneously
 - Backend: http://localhost:5000
 - Frontend: http://localhost:5173
-
----
-
-## 📱 Test the Application
-
-### Quick Demo Flow:
-1. **Add an Event** using the quick form
-2. **See Event Card** appear with risk assessment
-3. **View Real-time Updates** as events are created
-4. **Check Responsive Design** on different screen sizes
 
 ---
 
@@ -176,13 +217,6 @@ npm install
 
 ---
 
-## 📞 Support
-**Created and maintained by:** Natasha Hinga  
-**Role:** Backend & Dashboard Development  
-**Specialties:** Express.js, MongoDB, API Integration, React Dashboard
-
----
-
 ## 🎯 Success Checklist
 - [ ] Backend running on http://localhost:5000
 - [ ] Frontend running on http://localhost:5173  
@@ -192,5 +226,9 @@ npm install
 
 ---
 
-**Happy Coding! 🚀**  
-*Natasha Hinga - DryPlan Backend & Dashboard*
+## 📞 Support
+**Created and maintained by:** Natasha Hinga  
+**Role:** Backend & Dashboard Development  
+**Specialties:** Express.js, MongoDB, API Integration, React Dashboard
+
+**Happy Coding! 🚀**
